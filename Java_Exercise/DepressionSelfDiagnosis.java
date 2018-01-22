@@ -12,7 +12,7 @@ public class DepressionSelfDiagnosis {
         int sum1, sum2; // 十種憂鬱症狀況的總和
 
         int k;
-        final int weights = k=5,l=4,m=5,n=3,o=2,p=3,q=4,r=2,s=3,t=5;
+        final int weights = k=5,l=4,m=5,n=3,o=2,p=3,q=4,r=2,s=3,t=5; //十種憂鬱症狀況的加權比重
 
 
 
