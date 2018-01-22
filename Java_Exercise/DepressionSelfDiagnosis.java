@@ -65,24 +65,5 @@ public class DepressionSelfDiagnosis {
         sum2 = (a*k + b*l + c*m + d*n + e*o + f*p + g*q + h*r + i*s + j*t) / weights;
         System.out.printf("您憂鬱症指數為 =>%.2f\n",(float)sum2 / weights);
 
-
-
-//        k=5,l=4,m=5,n=3,o=2,p=3,q=4,r=2,s=3,t=5;
-//        ia, b, c, d, e, f, g, h, i, j; //十種憂鬱症狀況以 a ~ j 十個字母表示
-//
-//        int sum1; // 十種憂鬱症狀況的總和
-//
-//        int sum2;
-//
-//        int weights = a+b+c+d+e+f+g+h+i+j;
-//
-
-
-//
-//        final int a=6, b=3, c=8, d=3;
-//        int weights = a+b+c+d;
-//        int x, y, z, k;
-//        float value;
-
     }
 }
