@@ -38,13 +38,5 @@ public class BMI {
         }
 
         System.out.printf("\n== BMI 系統結束 ==");
-
-
-
-
-
-
-
-
     }
 }
