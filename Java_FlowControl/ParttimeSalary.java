@@ -32,7 +32,7 @@ public class ParttimeSalary {
             System.out.printf("\n總共薪資：%d",salary);
         }
 
-        if (hours > 160 && hours < 205){
+        else if (hours > 160 && hours < 205){
             salary = hours * 105;
             System.out.printf("\n本月基本薪資如下：");
             System.out.printf("\n薪資：%d\n",salary);
