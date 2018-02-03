@@ -48,7 +48,7 @@ public class ParttimeSalary {
             else if (hours >= 205){
 
             bonus = 100000;
-            System.out.printf("\n恭喜你！你老闆被關了");
+            System.out.printf("\n恭喜！你老闆被關了");
             System.out.printf("\n薪資+獎金 = %d",bonus);
         }
     }
