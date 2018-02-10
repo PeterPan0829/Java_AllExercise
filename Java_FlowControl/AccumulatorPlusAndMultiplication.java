@@ -21,8 +21,7 @@ public class AccumulatorPlusAndMultiplication {
             pro = pro * k;    //乘出來的答案
             k = k + 1;
         }
-        System.out.printf("\n1+2+3+4+...+%d = %d\n",value,sum);
+        System.out.printf("\n1+2+3+4+...+%d = %d",value,sum);
         System.out.printf("\n1*2*3*4+...*%d = %d\n",value,pro);
-
     }
 }
