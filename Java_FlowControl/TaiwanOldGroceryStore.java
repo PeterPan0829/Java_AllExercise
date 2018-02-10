@@ -17,7 +17,7 @@ public class TaiwanOldGroceryStore {
         long total=0, cost;
 
         System.out.printf("============歡迎光臨 Peter 雜貨店============\n");
-        System.out.printf("已購買 %d 元, 請輸入產品價格 (0 結束) =>\n",total);
+        System.out.printf("\n已購買 %d 元, 請輸入產品價格 (0 結束) =>\n",total);
 
         cost = keyin.nextInt();
 
