@@ -9,7 +9,7 @@ public class CashDesk {
             //這段意思就像是 int total =0;  int item = 0;
             int total = 1, item = 0;
 
-            System.out.printf("小北百貨收銀機 = %d\n", total);
+            System.out.printf("============小北百貨收銀機============\n");
             System.out.printf("請輸入商品金額 => ");
 
             item = keyin.nextInt();
