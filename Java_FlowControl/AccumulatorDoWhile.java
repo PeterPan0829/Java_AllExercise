@@ -13,3 +13,4 @@ public class AccumulatorDoWhile {
         System.out.printf("\n%d + 99 + 98 ..... + 1 = %d",limit,sum);
     }
 }
+
