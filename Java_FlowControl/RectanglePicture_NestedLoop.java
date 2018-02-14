@@ -19,9 +19,9 @@ public class RectanglePicture_NestedLoop {
         int width;
 
 //        要求輸入矩形高與寬
-        System.out.printf("\n請書入矩形高度 =>\n");
+        System.out.printf("\n請書入矩形高度 =>");
         height = keyin.nextInt();
-        System.out.printf("\n請書入矩形寬度 =>\n");
+        System.out.printf("\n請書入矩形寬度 =>");
         width = keyin.nextInt();
 
 //        繪製矩形圖
