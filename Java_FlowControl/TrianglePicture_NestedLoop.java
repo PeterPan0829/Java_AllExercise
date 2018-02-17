@@ -24,7 +24,7 @@ public class TrianglePicture_NestedLoop {
 
 //        繪製等齊三角形圖
         for (int i=1; i<=height; i++){                           // 外迴圈，指定高度
-            for (int j=1; j<=(height-i); j++){                   // 第 1 個內迴圈，輸出空格
+            for (int j=1; j<=(height-i); j++){                   // 第 1 個內迴圈，輸出空格, height-i(1) 表示減掉空白
                 System.out.printf(" ");
             }
             for (int k =1; k<=i; k++){                           // 第 2 個內迴圈，輸出星號
