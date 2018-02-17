@@ -17,9 +17,9 @@ public class TrianglePicture_NestedLoop {
         int width;
 
 //        要求輸入三角形高與寬
-        System.out.printf("\n請書入三角形高度 =>");
+        System.out.printf("\n請輸入三角形高度 =>");
         height = keyin.nextInt();
-        System.out.printf("\n請書入三角形寬度 =>");
+        System.out.printf("\n請輸入三角形寬度 =>");
         width = keyin.nextInt();
 
 //        繪製等齊三角形圖
