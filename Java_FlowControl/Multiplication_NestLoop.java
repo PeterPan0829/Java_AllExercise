@@ -1,7 +1,7 @@
 package Java_FlowControl;
 
 /*
-    九九乘法表_雙重迴圈
+    九九乘法表_for雙重迴圈
  */
 
 public class Multiplication_NestLoop {
