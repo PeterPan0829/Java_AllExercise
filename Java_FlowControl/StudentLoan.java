@@ -31,13 +31,13 @@ public class StudentLoan {
         System.out.printf("\n前 10 期應繳納金額如下：");
 
         do {
-            interest = (balance * rate) / 12;
-            pay = pay_month + interest;
-            balance = balance - pay_month;
-            count = count + 1;
-            sum = sum + interest;
-            System.out.printf("\n第 %d 期需繳納 %f 萬元",count,pay);
-        } while (count < stages);
+            interest = (balance * rate) / 12;                              //本月延伸利息
+            pay = pay_month + interest;                                    //計算目前該月應繳金額
+            balance = balance - pay_month;                                 //計算本月餘額
+            count = count + 1;                                             //累加還款期數
+            sum = sum + interest;                                          //累加產生利息
+            System.out.printf("\n第 %d 期需繳納 %f 萬元",count,pay);        //輸出本月期數、應繳金額
+        } while (count < stages);                                          //是否已到期
         System.out.printf("\n到清償為止，總共延伸利息 %f 萬元",interest);
     }
 }
