@@ -20,9 +20,7 @@ package Java_MethodAndImportAPI;
                 北方擲的是: 3
 
             擲出最大的是 = 13
-
  */
-
 
 import java.util.Random;
 import java.util.Scanner;
