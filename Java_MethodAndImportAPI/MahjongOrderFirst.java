@@ -76,6 +76,7 @@ public class MahjongOrderFirst {
         return sum;
     }
 
+    //宣告 max 方法
     static int max(int a, int b){
         if (a > b){
             return a;
