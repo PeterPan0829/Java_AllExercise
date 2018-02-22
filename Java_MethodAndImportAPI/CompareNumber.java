@@ -31,8 +31,8 @@ public class CompareNumber {
         }
         System.out.printf("最大數值是 %d\n", max);
         System.out.printf("最小數值是 %d", min);
-    }
-    //main方法結束
+
+    }//main方法結束
 
         //宣告 Max 方法
         static int Max(int a, int b){
