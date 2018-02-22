@@ -45,28 +45,31 @@ public class DepositAfterRetirement {
             balance = (int) (balance + (balance * rate/12));
             balance = balance + credit;
 //            count = count + 1;
+
         }
 
-        System.out.printf("\n到退休之前可儲存 %d 元\n",balance);
-        life = ((limit_age - retired_age) * 12) ;
-        System.out.printf("平均每個月有 %d 元生活費",life);
 
+
+        System.out.printf("\n到退休之前可儲存 %d 元\n",balance);
+        life = balance / ((limit_age - retired_age) * 12) ;
+        System.out.printf("平均每個月有 %d 元生活費",life);
 
         if (balance<5000){
             System.out.printf("等待救濟");
 
-         if (balance>5000 && balance<10000){
-            System.out.printf("免強可以湖口");
-         }
-         if (balance>10000 && balance<20000){
-             System.out.printf("安逸舒適");
-         }
-         if (balance>20000 && balance<40000){
-             System.out.printf("富貴生活");
-         }
-         if (balance > 40000){
-             System.out.printf("周遊列國，遨遊世界");
-         }
+            if (balance>5000 && balance<10000){
+                System.out.printf("免強可以湖口");
+            }
+            if (balance>10000 && balance<20000){
+                System.out.printf("安逸舒適");
+            }
+            if (balance>20000 && balance<40000){
+                System.out.printf("富貴生活");
+            }
+            if (balance > 40000){
+                System.out.printf("周遊列國，遨遊世界");
+            }
+
         }
     }
 }
