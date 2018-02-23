@@ -34,8 +34,6 @@ public class ThrowDice {
         int maxNum = 0;                          //宣告擲出最大數值並設定初值
         int number;
 
-
-
         for (int i=1; i<=4; i++){                //有四個玩家所以終止條件設定4
             System.out.printf("\n請玩家輸入姓名並擲骰子 =>");
             name = keyin.nextLine();
