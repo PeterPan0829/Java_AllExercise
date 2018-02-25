@@ -25,7 +25,7 @@ public class ThrowDiceGame {
         System.out.printf("\n輸入姓名並擲骰子 （若直接輸入 Enter 則結束）=>");
         name = keyin.nextLine();
         while (name.length() != 0){                                 //長度不等於 0 表示不直接輸入 Enter 有正常輸入名字 ; 直接輸入 Enter 就是等於 0
-            game(name);
+            game(name);                                             //呼叫 game() 把 name 傳到這個 game()
             System.out.printf("領先者：%s, 點數：%d\n",MaxName,MaxNum);
             System.out.printf("最低者：%s, 點數：%d\n",MinName,MinNum);
 
