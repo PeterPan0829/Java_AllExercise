@@ -11,15 +11,15 @@ package Java_MethodAndImportAPI;
  */
 
 import java.lang.*;                             //導入子套件（包含 Math 類別）
-import java.util.Scanner;
+import java.util.Scanner;                       //僅導入 java.util 套件下 Scanner 類別，其他未被導入可減少佔用記憶體空間。
 
 
 public class EngineeringCalculator {
     public static void main(String[] args) {
-        Scanner keyin = new Scanner(System.in);
+        Scanner keyin = new Scanner(System.in); //利用 Scanner 類別宣告產生 keyin 物件，keyin 物件繼承了 Scanner 類別的所有方法成員（Method member）。
         double value, ans=0;                    //value 輸入要計算的值 ; ans 是計算完的值
         int select;                             //一開始選擇計算機1～7的功能
-        disp_menu();                            //一開始隨即呼叫 menu()
+        disp_menu();                            //一開始隨即呼叫 menu(), 呼叫 disp_mem() 函數，該函數無傳回值（void）也不需要傳任何引數。
 
         select = keyin.nextInt();               //呼叫引用 keyin 的物件方法 nextLine()
 
@@ -28,7 +28,7 @@ public class EngineeringCalculator {
             value = keyin.nextDouble();         //呼叫引用 keyin 的物件方法 nextDouble()
             switch (select){
                 case 1:
-                    //直接引用 Math 的類別方法
+                    //直接引用 Math 的類別 log() 方法
                     ans = Math.log(value);
                     System.out.printf("log(%.2f) = %.2f\n",value,ans);
                     break;
