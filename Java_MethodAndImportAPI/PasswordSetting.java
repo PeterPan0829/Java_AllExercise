@@ -46,7 +46,7 @@ public class PasswordSetting {
         value1 = (int) (1 + Math.random() * 999);                   //產生加鹽亂數
         key = String.valueOf(value1);                               //轉換鹽亂數成字串
             System.out.printf("產生鹽亂數 = %s 儲存於電腦系統內\n",key);
-        password2 = password1.concat(key);                          //鹽與密碼明文連結
+        password2 = password1.concat(key);                          //鹽與密碼明文連結, concet是把指定字元串連接到此字元串的結尾。
             System.out.printf("密碼明文與加鹽組合 = %s\n",password2);
         hash_pas = password2.hashCode();                            //產生密碼雜湊值
             System.out.printf("%s 密碼雜湊 = %d\n",name,hash_pas);
@@ -55,11 +55,11 @@ public class PasswordSetting {
         password1 = keyin.nextLine();
             System.out.printf("由系統中取出鹽 = %s\n",key);
         password2 = password1.concat(key);
-            System.out.printf("輸入密碼與鹽結合後 = %s\n",password2);
+            System.out.printf("輸出密碼與鹽結合後 = %s\n",password2);
         value2 = password2.hashCode();
-            System.out.printf("輸入密碼雜湊值 = %d\n",value2);
+            System.out.printf("輸出密碼雜湊值 = %d\n",value2);
 
-            if (value2 == hash_pas){
+        if (value2 == hash_pas){
             System.out.printf("%s 密碼設定正確，該帳戶可以正常使用\n",name);
         }else
             System.out.printf("%s 密碼設定不正確,請重新設定\n",name);
