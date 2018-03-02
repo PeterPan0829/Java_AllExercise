@@ -1,6 +1,8 @@
 package Java_MethodAndImportAPI;
 
 /*
+    主要在於應用 Java 當中的套件，詳細的說明會在之後上傳跟大家分享～
+
     製作一套 1024 位元的 RSA 鑰匙配對產生工具，每次執行時會產生不同的鑰匙配對(公開鑰匙與私有鑰匙)，
     利用 Java.scurity 套件內，產生 RSA 鑰匙配對方法。期望操作介面如下：
 
@@ -44,12 +46,12 @@ public class RSA_KeyPair {
             String path = ".";
 
             // Generate the key pair (public key and private key)
-            KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");
-            SecureRandom random = new SecureRandom();
+            KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");   // 產生鑰匙配對
+            SecureRandom random = new SecureRandom();                        // 產生亂數
 
             // 給與亂數因子，指定鑰匙長度，再產生鑰匙
             System.out.println("產生RSA 鑰匙配對中");
-            random.setSeed("seedVaule".getBytes());
+            random.setSeed("seedVaule".getBytes());                          // 把字串 seedVaule 轉換成 Byte
             keygen.initialize(1024, random);                          // Generate 1024-bit keys
             KeyPair generatedKeyPair = keygen.generateKeyPair();
 
@@ -64,7 +66,7 @@ public class RSA_KeyPair {
 
             adam.dumpKeyPair(loadedKeyPair);                                 // Print the loaded keys
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace();                                             // 其中，如果有錯誤的話要印出來
             return;
         }
     }
@@ -81,6 +83,7 @@ class myKeyPair {
         System.out.println("Private Key: " + getHexString(priv.getEncoded()));
     }
 
+    //2進位轉換成16進位
     public String getHexString(byte[] b) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < b.length; i++)
@@ -92,7 +95,6 @@ class myKeyPair {
 
     // 將鑰匙配對寫入檔案方法
     public void SaveKeyPair(String path, KeyPair keyPair) throws IOException {
-
         PrivateKey privateKey = keyPair.getPrivate();
         PublicKey publicKey = keyPair.getPublic();
 
@@ -111,9 +113,9 @@ class myKeyPair {
 
 
 
-    // 由檔案中讀取鑰匙配對方法
+    // 由檔案中讀取鑰匙配對方法（其中KeyPair是一個資料結構，這邊利用到物件儲存方式）
     public KeyPair LoadKeyPair(String path, String algorithm)
-            throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
+        throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
 
         // 讀取公開鑰匙
         File filePublicKey = new File(path + "/public.key");
@@ -128,7 +130,6 @@ class myKeyPair {
         byte[] encodedPrivateKey = new byte[(int) filePrivateKey.length()];
         fis.read(encodedPrivateKey);
         fis.close();
-
 
 
         // Generate KeyPair.
