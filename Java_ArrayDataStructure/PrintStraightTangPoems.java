@@ -26,15 +26,16 @@ import java.util.Scanner;
 
 public class PrintStraightTangPoems {
     public static void main(String[] args) {
-        String poem[][] = new String[4][5];
+        String poem[][] = new String[4][5];                                                  // Row_4, Column_5
         String num ="";
         Scanner keyin = new Scanner(System.in);
         
         System.out.printf("＝＝五言四句唐詩列印＝＝\n");
         
+        //讀入五言四句唐詩：
         for (int i=0; i<4; i++){
-            System.out.printf("請輸入第 %d 句（五個字） =>",i+1);                             //因為原本 i 是0
-            num = keyin.next();
+            System.out.printf("請輸入第 %d 句（五個字） =>",i+1);                             //因為原本 i 是0,但我們要用第一句開始就要加 1
+            num = keyin.next();                                                              //讀取 num 這個空字串
             Scanner s = new Scanner(num).useDelimiter("");                                   //沒有分隔的方法
             for (int j=0; j<5; j++){                                                         //分別讀取詩句中每一個文字
                 poem[i][j] = s.next();
