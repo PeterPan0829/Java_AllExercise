@@ -20,7 +20,13 @@ package Java_ArrayDataStructure;
 相  掩  明  歸
 送  柒  年  不
 罷  扉  綠  歸
- */
+
+
+其中運用.useDelimiter可以參考以下：
+https://stackoverflow.com/questions/28766377/how-do-i-use-a-delimiter-in-java-scanner　
+
+
+*/
 
 import java.util.Scanner;
 
