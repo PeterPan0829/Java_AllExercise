@@ -11,12 +11,12 @@ public class AutoLottery {
     public static void main(String[] args) {
         int value, flag;                                                    //隨機存取號碼、判斷有無重複是用 flag
         int num[] = new int[6];                                             //儲存選取號碼 6 位
-        int i = 0;
+        int i = 0;                                                          //i只是表示在第幾個號碼,因為下面我們設 while(i<6)
         while (i<6){
             flag = 0;
             value = 1 + (int) (Math.random() * 49);                         //這一期的樂透就是在1~49
             for (int j=0; j<i; j++){                                        //檢視已選出的號碼
-                if (value == num[j]){                                       //是否重複
+                if (value == num[j]){                                       //比對號碼是否有相同,有的話設為1
                     flag = 1;                                               //重複則 break 離開 for 迴圈再次重來
                     break;
                 }
