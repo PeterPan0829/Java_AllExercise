@@ -20,6 +20,8 @@ public class HighestAndLowesGrade {
                 min = score[i];
         }
         
+        
+        //以下是比較不好的輸出方式之後再花時間修改，可以不要用兩個迴圈處理這個輸出
         for (int i=0; i<max.length; i++){
             System.out.printf("成績最高者 %d ",max[i]);
         }
