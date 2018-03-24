@@ -2,7 +2,6 @@ package Java_ArrayDataStructure;
 
 /*
     股票最近十天的最高和最低價
-
  */
 
 public class StockPriceHighestAndLowest {

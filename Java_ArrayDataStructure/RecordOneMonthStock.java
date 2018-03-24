@@ -23,11 +23,12 @@ public class RecordOneMonthStock {
         Scanner keyin = new Scanner(System.in);
 
         double cost;
-        int select;
+        int select = 0;
         show_menu();
-        select = keyin.nextInt();
+        
 
         while (select != 3){
+            select = keyin.nextInt();
             switch (select){
                 case 1:
                     show_stock();
@@ -67,7 +68,7 @@ public class RecordOneMonthStock {
             if ((i+1) % 5 == 0){                         //列印五筆,換行
                 System.out.printf("\n");
             }
-            System.out.printf("\n");                    //列印完畢,換行
+            System.out.printf("　");                    //列印完畢,換行
         }
     }
 }
