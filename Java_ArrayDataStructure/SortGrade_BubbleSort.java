@@ -42,7 +42,6 @@ public class SortGrade_BubbleSort {
                 System.out.printf("%d   ",number[j]);
             }
             System.out.println();
-
         }
 
     }
