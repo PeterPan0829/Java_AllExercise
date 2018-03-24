@@ -20,14 +20,9 @@ public class HighestAndLowesGrade {
                 min = score[i];
         }
         
-        for (int i=0; i<max.length; i++){
-            System.out.printf("成績最高者 %d ",max[i]);
-        }
-    
+
+        System.out.printf("最高者 %d 成績 %d",max[0],max[1]);
         System.out.println();
-        
-        for (int i=0; i<max.length; i++){
-            System.out.printf("成績最低者 %d ",min[i]);
-        }
+        System.out.printf("最低者 %d 成績 %d",min[0],min[1]);
         }
     }
