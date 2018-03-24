@@ -31,7 +31,7 @@ public class SortGrade_BubbleSort {
 
         for (int i=0; i<number.length; i++){                  //第一層迴圈是先跑整個尚未排序的陣列
             for (int j=i+1; j<number.length; j++){            //排序的動作一定是和下一個數字去比對,所以要用1去比對
-                    if (number[i] < number[j]){               //原本的內容i < 要排序的內容 j 這裡也可以解釋成 j>i, 如果有j>i就做排序
+                    if (number[i] < number[j]){               //原本的內容i < 要排序的內容 j 這裡也可以解釋成 j>i,如果被比較元素大於指定元素（number[j] > number[i]），則兩元素交換，否則不做任何處理。
                         temp = number[i];                     //運用暫存變數 temp 去存取還沒排序的內容 number[i]
                         number[i] = number[j];                //把要排序的內容 number[j] 丟給number[i]
                         number[j] = temp;                     //再把 temp原本的內容(number[i]) 丟給 number[j]
