@@ -3,6 +3,7 @@ package Java_ArrayDataStructure;
     數學老師利用一個二維陣列儲存某一班級學生的成績，
     score[][] = {{411101, 70}, {411102, 80}, {411103, 75}, {411104, 90}, {411105, 85}, {4111106, 65}, {411107, 83}, {411108, 78}}。
     請編寫程式列印出該班成績最高與最低分數與姓名
+
  */
 
 public class HighestAndLowesGrade {
@@ -19,16 +20,9 @@ public class HighestAndLowesGrade {
                 min = score[i];
         }
         
-        
-        //以下是比較不好的輸出方式之後再花時間修改，可以不要用兩個迴圈處理這個輸出
-        for (int i=0; i<max.length; i++){
-            System.out.printf("成績最高者 %d ",max[i]);
-        }
-    
+
+        System.out.printf("最高者 %d 成績 %d",max[0],max[1]);
         System.out.println();
-        
-        for (int i=0; i<max.length; i++){
-            System.out.printf("成績最低者 %d ",min[i]);
-        }
+        System.out.printf("最低者 %d 成績 %d",min[0],min[1]);
         }
     }
