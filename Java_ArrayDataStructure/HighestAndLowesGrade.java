@@ -19,7 +19,6 @@ public class HighestAndLowesGrade {
             if(score[i][1] < min[1])
                 min = score[i];
         }
-        
 
         System.out.printf("最高者 %d 成績 %d",max[0],max[1]);
         System.out.println();
