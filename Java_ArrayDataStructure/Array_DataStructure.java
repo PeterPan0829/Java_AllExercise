@@ -29,7 +29,7 @@ public class Array_DataStructure {
         
         // 計算每位學生的總平均分數
         for (int i=0; i<score.length; i++){
-            score[i][5] = (score[i][1] + score[i][2] + score[i][3] + score[i][4] / 4);
+            score[i][5] = (score[i][1] + score[i][2] + score[i][3] + score[i][4]) / 4;
         }
     
         // 列印所有學生成績資料
