@@ -43,7 +43,7 @@ public class Array_NonSequence {
                         System.out.printf("請插入元素 =>");
                         value = keyin.nextInt();
                         num[point] = value;                 //這邊要特別注意, 如果是先執行游標元素 +1 再塞進去（num[point] = value）會是錯誤,大家可以把這行和下面那行對調試試看
-                        point = point + 1;                  //插入一筆資料後 point = point + 1
+                        point = point + 1;                  //插入一筆資料後 point = point + 1　
 
                     }
                     break;
