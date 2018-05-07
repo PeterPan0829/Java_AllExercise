@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Array_NonSequence {
     static int num[] = new int[50];                          //宣告無序陣列空間  0~49
     static int point;                                        //宣告游標變數
-    
+
     public static void main(String[] args) {
         Scanner keyin = new Scanner(System.in);
         Random random = new Random();
