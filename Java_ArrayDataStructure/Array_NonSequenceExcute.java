@@ -18,7 +18,7 @@ public class Array_NonSequenceExcute {
         
         point = -1;                                          //游標初值（表示空的,不是0因為我們插入的元素是 1個元素, 要預留位置所以 - 1）
         
-        for (int i = 0; i < 30; i++) {                             //表示要列印出來的數字總數有多少
+        for (int i = 0; i < 30; i++) {                       //表示要列印出來的數字總數有多少
             value = random.nextInt(100);              // 0 ~ 99
             point = point + 1;
             num[point] = value;                              //把 value 放到類別變數 num[] 當中, 抓point 的值
@@ -42,18 +42,17 @@ public class Array_NonSequenceExcute {
                         value = keyin.nextInt();
                         num[point] = value;                 //這邊要特別注意, 如果是先執行游標元素 +1 再塞進去（num[point] = value）會是錯誤,大家可以把這行和下面那行對調試試看
                         point = point + 1;                  //插入一筆資料後 point = point + 1　
-                        
+                        break;
                     }
                 case 3:                                     //刪除元素
                     System.out.printf("\n請輸入想刪除的元素 =>\n");
                     value = keyin.nextInt();
                     int location = Linear_search(value);
-//                    int location = Linear_search(value);
                     if(location == -1){
                         System.out.printf("陣列內沒有 %d 元素\n",value);
                     }else {
-                        for (int i=location; i<point; i++){
-                            num[i] = num[i+1];
+                        for (int i=location; i<=point; i++) {
+                            num[i] = num[i + 1];              //一個一個覆蓋下去System.out.printf("num[%d] = %d 已刪除此元素\n",i,location);
                         }
                     }
                     point = point-1;                        //如果 point 是 -1 代表裡面是空的
@@ -89,10 +88,12 @@ public class Array_NonSequenceExcute {
             }
         }
     }
-    
+
+
+    //線性搜尋（刪除指定元素）
     static int Linear_search(int value){
         int i=0 , flag = 0;
-        
+
         while (i<10)
         if (value == num[i]){
             flag = 1;
@@ -107,6 +108,34 @@ public class Array_NonSequenceExcute {
 
     
 //        return value;
+//        return i;
         return i;
     }
 }
+
+
+
+
+//    int value, flag=0, i;                                                    //其中 flag 是一個指標用它去做搜尋
+//    int num[] = {23,54,67,12,88,95,15,78,80,45,};
+//        System.out.printf("num[] = ");
+//
+//                for (int k=0; k<10; k++){
+//        System.out.printf("%d　",num[k]);
+//        }
+//        System.out.printf("\n");
+//
+//        System.out.printf("\n請輸入一個數值 =>");
+//        value = keyin.nextInt();
+//        i=0;
+//        while (i<10){
+//        if(value == num[i]){
+//        flag = 1;
+//        break;
+//        }
+//        i++;                                                               //還沒找到就繼續找
+//        }
+//        if (flag ==1){
+//        System.out.printf("num[%d] = %d 找到囉兄弟！\n",i,value);            //前面的 i 是 num 陣列當中的第幾個位置
+//        }else
+//        System.out.printf("%d 不在 num 陣列內",value);
