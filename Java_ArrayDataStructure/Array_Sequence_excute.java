@@ -9,7 +9,7 @@ public class Array_Sequence_excute {
 
     public static void main(String[] args) {
         Scanner keyin = new Scanner(System.in);
-        point = -1;                                     // 設置空值
+        point = -1;                                     //設置空值
         int select, k, item;                            //插入元素 item
 
         for (int i=0; i<50; i++){
