@@ -57,6 +57,6 @@ public class Array_Sequence_BinarySearch {
         if (flag == 1){
             System.out.printf("學號 %d 成績是 %d\n",score[mid][0],score[mid][1]);
         }else
-            System.out.printf("沒有 %d 學號學生\n",value);
+            System.out.printf("沒有 %d 學號學生，請重新輸入\n",value);
     }
 }
