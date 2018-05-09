@@ -16,7 +16,7 @@ public class Array_Sequence_excute {
             num[i] = (i+1) * 2;
             point = point + 1;
         }
-        print_array();
+        print_menu();
         select = keyin.nextInt();
         while (select != 4){
             switch (select){
@@ -73,7 +73,7 @@ public class Array_Sequence_excute {
         System.out.printf("(1)列印有序陣列內容\n");
         System.out.printf("(2)插入陣列元素\n");
         System.out.printf("(3)刪除陣列元素\n");
-        System.out.printf("(4)離開系統");
+        System.out.printf("(4)離開系統\n");
         System.out.printf("\t請輸入工作項目 ==> ");
     }
 
