@@ -13,8 +13,8 @@ public class Array_Sequence_insert {
 
     public static void main(String[] args) {
         Scanner keyin = new Scanner(System.in);
-        point = -1;                                     // 設置空值
-        int select, k, item;                            //插入元素 item
+        point = -1;                                     //設置空值
+        int select, k, item;                            //插入元素item k是原本的指標的位置(預留一個位置去做判斷)
 
         for (int i=0; i<30; i++){                       //給予陣列初值
             num[i] = (i+1) *2;                          //存入有序資料
@@ -35,16 +35,16 @@ public class Array_Sequence_insert {
                     }else {
                         System.out.println("請輸入想插入的元素 ==>");
                         item = keyin.nextInt();
-                        point = point +1;
-                        k = point;
+                        point = point +1;                //做移位的動作
+                        k = point;                       //表示原來指標的位置
                         while (true){
-                            if (num[k-1] > item){
-                                num[k] = num[k-1];
-                                k = k - 1;
+                            if (num[k-1] > item){        //在陣列插入元素的下方(原本的值)大於我們插入的元素
+                                num[k] = num[k-1];       //做移位的動作
+                                k = k - 1;               //移位完這裡就是換下一個指標
                             }else {
                                 break;
                             }
-                            num[k] = item;
+                            num[k] = item;               //插入元素
                         }
                     }
                     break;
