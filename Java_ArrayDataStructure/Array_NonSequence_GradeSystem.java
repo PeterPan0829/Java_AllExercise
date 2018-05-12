@@ -19,7 +19,7 @@ package Java_ArrayDataStructure;
 
     程式架構：
     main() 內除了產生學生資料的初始值外，也提供各項功能的輸入選單。
-    print_menu() 與 print_course() 是顯示功能選單與學生成績資料顯示
+    print_menu() 與 print_course() 是顯示功能選單與學生成績資料顯示。
     Linear_Search() 功能是搜尋到想要處理資料的位置；Buffer_sort() 功能是依照平均分數排列。
 
  */
