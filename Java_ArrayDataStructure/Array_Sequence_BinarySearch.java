@@ -23,7 +23,7 @@ public class Array_Sequence_BinarySearch {
         int number = 411101;
 
         for (int i=0; i<score.length; i++){
-            score[i][0] = number + 1;                       //學號
+            score[i][0] = number + i;                       //學號
             score[i][1] = (int) (Math.random() * 100);      //分數（使用亂數）
         }
 
