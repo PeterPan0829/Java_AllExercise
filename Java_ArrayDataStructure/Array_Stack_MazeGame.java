@@ -1,7 +1,7 @@
 package Java_ArrayDataStructure;
 
 /*
- 走迷宮演練(驗證 Stack 功能)
+ 走迷宮演練(驗證 Stack 功能), 搭配 wiki Data Structure_StackFILO 學習文章會更有體會.
 
  談到堆疊(Stack)大多人都會想到走迷宮的問題，但其實它應用非常廣泛，譬如導航系統一定都會用到。
  利用堆疊記錄過去走的路徑，當須退回原處時，再依照堆疊內記錄退回原處，就不會迷路了。
