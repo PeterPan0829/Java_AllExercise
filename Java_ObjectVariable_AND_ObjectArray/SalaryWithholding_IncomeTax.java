@@ -29,11 +29,11 @@ public class SalaryWithholding_IncomeTax {
         emp.duty = 15000;
 
         System.out.printf("\n***** 列印員工稅額 *****\n");
-        System.out.printf("員工代號= %d ", emp.ID);
-        System.out.printf("姓名= %s ", emp.name);
-        System.out.printf("部門= %s ", emp.department);
-        System.out.printf("薪資= %d ", emp.payment+emp.duty);
+        System.out.printf("員工代號 => %d\n", emp.ID);
+        System.out.printf("姓名 => %s\n", emp.name);
+        System.out.printf("部門 => %s\n", emp.department);
+        System.out.printf("薪資 => %d\n", emp.payment+emp.duty);
         tax = (int)((emp.payment+emp.duty)*0.1);                //稅額是總領薪資的 10% 所以 *0.1，會有小數點所以就強制轉型為整數int
-        System.out.printf("預扣稅額= %d\n", tax);
+        System.out.printf("\n預扣稅額 => %d\n", tax);
     }
 }
