@@ -41,7 +41,7 @@ public class Planning_Salary {
         Scanner keyin = new Scanner(System.in);
 
         /*　產生物件變數　Object Variable */
-        Employee emp = new Employee();          //這裡很重要唷！意思是在 Planning_Salary 的 class 當中可以 "呼叫產生" Employee 這個物件變數。白話就是，我宣告產生一個 Employee 的物件名字叫做 emp 同時利用 Employee 這個類別 new 產生物件放到 emp 裡面。 看到 "=" 先看等號的右邊！！
+        Employee emp = new Employee();          //這裡很重要唷！意思是在 Planning_Salary 的 class 當中可以 "呼叫產生" Employee 這個物件變數。白話就是，我宣告產生一個 Employee 的物件名字叫做 emp 同時利用 Employee 這個類別 new 產生物件放到 emp 裡面，所以就能使用 Employee() 這個class 當中的方法成員或物件成員！！看到 "=" 先看等號的右邊！！
         System.out.printf("***** 輸入員工資料 *****\n");
         System.out.printf("輸入員工姓名 =>");
         emp.name = keyin.nextLine();
