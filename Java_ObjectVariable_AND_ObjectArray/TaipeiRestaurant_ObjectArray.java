@@ -57,8 +57,8 @@ public class TaipeiRestaurant_ObjectArray {
             menu[i].price = price[i];
         }
 
+        //印出菜單內容
         System.out.printf("  菜單\t\t價格\t\t卡路里\n");
-
         for (int i=0; i<name.length; i++){
             System.out.printf("%s\t\t",menu[i].name);
             System.out.printf("%d\t\t",menu[i].price);
