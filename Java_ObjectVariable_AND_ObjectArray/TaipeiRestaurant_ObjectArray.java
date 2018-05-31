@@ -23,15 +23,10 @@ class Item{
     String name;
 }
 
-
-
 public class TaipeiRestaurant_ObjectArray {
-
     static Item[] menu = new Item[100];  //還記得為什麼要加上 static 嗎? 仔細看! 我是宣告在 main 以外, 所以要成為全域變數(類別變數)一定要加上 static
-
     public static void main(String[] args) {
-        
-        
+
         // 給予菜單初值
         String name[] = {"蠔油香菇","蒜泥白肉","筍干扣肉","五味花枝",
                         "紅燒鮮魚","麻婆豆腐","白玉珍丸","快炒青菜",
