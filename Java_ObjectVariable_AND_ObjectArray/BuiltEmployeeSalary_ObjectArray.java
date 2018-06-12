@@ -4,7 +4,7 @@ package Java_ObjectVariable_AND_ObjectArray;
     擴充 SignUpEmployee_ObjectArray 程式功能。
     請幫公司建立一套人事管理系統，該系統允許輸入員工資料並儲存於資料檔案內（Human.data）。
     當輸入完畢之後，再由檔案內讀出並顯示螢幕上，觀察資料是否建立正確。
-    假設登錄員工資料包含有：員工代號（int）、姓名（String）、工作部門（String）、底薪（int）、職務加級（int）；
+    假設登錄員工資料包含有：員工代號（int）、姓名（String）、工作部門（String）、底薪（int）、職務加級（int）。
 
     期望操作介面，以及檔案輸出結果如下：
     是否繼續輸入員工資料 (yes/no) =>yes
@@ -31,8 +31,9 @@ package Java_ObjectVariable_AND_ObjectArray;
     == Human.data 輸入完畢 ==
  */
 
-import java.io.*;
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.*;
 
 public class BuiltEmployeeSalary_ObjectArray {
     public static void main(String[] args) throws IOException {                         //如果有錯誤就把錯誤訊息丟到 IOEception底下
@@ -41,7 +42,7 @@ public class BuiltEmployeeSalary_ObjectArray {
 
         /* 宣告輸出檔案物件 */
         String file = "Human.data";                                                     //宣告產生一個緩衝器型的輸出檔案物件，指定該檔案名稱為 Human.data
-        BufferedWriter data = new BufferedWriter(new FileWriter(file, true));    //宣告一個BufferWriter的物件叫做 data, 然後產生FileWriter把file丟進去。
+        BufferedWriter data = new BufferedWriter(new FileWriter(file));    //宣告一個BufferWriter的物件叫做 data, 然後產生FileWriter把file丟進去。
         int k = 0;                                                                      //讀取幾筆資料我們用一個變數，而且是一個全域變數要讓任何物件、方法都可以使用它
         String select;                                                                  //宣告一個 select 去做選擇 yse/no
 
@@ -84,11 +85,11 @@ public class BuiltEmployeeSalary_ObjectArray {
         String inData;
         File fileID = new File(file);                                                   //開啟 Human.data 檔案
         if (fileID.exists()){                                                           //判斷 fileID 存不存在
-            BufferedReader data_R = new BufferedReader(new FileReader(fileID));
+            BufferedReader data_R = new BufferedReader(new FileReader(fileID));         //宣告一個檔案物件，以供輸入使用，該檔案的名稱是『String file = “Human.data"』。
             System.out.printf("代號\t姓名\t部門\t底薪\t加級\n");
-            while ((inData = data_R.readLine()) != null);{                              //如果data_R 讀進來不是空值表示有資料
+            while ((inData=data_R.readLine()) != null){                              //如果data_R 讀進來不是空值表示有資料。Ps.這邊我一開始打錯在判斷式((inData=data_R.readLine()) != null)後面加上 ";" 分號會有錯誤!! 最後是 debug 才知道問題唷!!
             System.out.printf("%s\n",inData);
-            } 
+            }
             data_R.close();                                                             //如果是空值就結束掉
         }else {
             System.out.printf("%s 檔案讀取錯誤\n",file);
@@ -96,3 +97,4 @@ public class BuiltEmployeeSalary_ObjectArray {
         }
     }
 }
+
