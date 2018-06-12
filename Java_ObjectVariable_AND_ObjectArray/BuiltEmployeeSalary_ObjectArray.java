@@ -1,7 +1,7 @@
 package Java_ObjectVariable_AND_ObjectArray;
 
 /*
-    擴充 SignUpEmployee_ObjectArray 程式功能。請參考 wiki 22-3_紀錄檔案的輸入 輸出運用
+    擴充 SignUpEmployee_ObjectArray 程式功能。請參考 wiki 22-3_紀錄檔案的輸入＆輸出運用
     請幫公司建立一套人事管理系統，該系統允許輸入員工資料並儲存於資料檔案內（Human.data）。
     當輸入完畢之後，再由檔案內讀出並顯示螢幕上，觀察資料是否建立正確。
     假設登錄員工資料包含有：員工代號（int）、姓名（String）、工作部門（String）、底薪（int）、職務加級（int）。
