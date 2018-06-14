@@ -1,8 +1,9 @@
 package Java_ObjectVariable_AND_ObjectArray;
 
 /*
-    列印公司員工薪資表，延用 BuiltEmployeeSalary_ObjectArray class 的 Human.data 檔案。
+    請參考 wiki 22-3_紀錄檔案的輸入＆輸出運用當中的22-3-3記錄檔案輸出格式_範例：列印公司員工薪資表。
 
+    列印公司員工薪資表，延用 BuiltEmployeeSalary_ObjectArray class 的 Human.data 檔案。
     請編寫一套程式可供列印公司所有員工的薪資表，員工資料直接由 Human.data 檔案讀取。
     薪資表包含員工代號、姓名、服務部門，薪資總額（= 底薪 + 職務加級）、預扣稅額（= 薪資總額 * 0.1）與應領薪資（薪資總額 – 預扣稅額）。
 
