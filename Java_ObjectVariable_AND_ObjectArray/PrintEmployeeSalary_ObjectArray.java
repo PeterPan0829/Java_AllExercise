@@ -54,7 +54,8 @@ public class PrintEmployeeSalary_ObjectArray {
                 sum = worker[i].payment + worker[i].duty;                                   //薪資 + 職務加給
                 total = total + sum;
                 tax = (int)(sum * 0.1);                                                     //稅 = 薪資 * 0.1
-                net = tax - tax_total;
+                net = sum - tax;
+                tax_total = tax + tax_total;
                 System.out.printf("%s(%d %s)\t",worker[i].name, worker[i].ID, worker[i].department);
                 System.out.printf("%d\t\t%d\t%d\n",sum, tax, net);
             }
