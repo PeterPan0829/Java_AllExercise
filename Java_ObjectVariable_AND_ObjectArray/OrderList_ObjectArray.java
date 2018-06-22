@@ -81,7 +81,7 @@ public class OrderList_ObjectArray {
 
         int calorie[] = {800,500,700,600,600,200,300,150, 100,
                 300,400,400,300,500, 500,400,100,800,
-                300,300,10,200};
+                300,300,10,200}; 
 
         for (int i=0; i<name.length; i++){
             Menu[i] = new Item();
