@@ -41,15 +41,15 @@ package Java_ObjectVariable_AND_ObjectArray;
 5桌次  酸辣海鮮湯
  */
 
-//class Item{               我們在同一個 package 下面新增過 Item class 可以直接在下方實作就好，因為 Item class 權限是開放的！
-//    int price;            後續我們會再談到唷！
+//class Item{               我們在同一個 package 下面新增過 Item class 可以直接在下方實作就好，因為 Item class 權限是開放的！後續我們會再談到唷！
+//    int price;
 //    int calorie;
 //    String name;
 //}
 
 import java.util.Scanner;
 
-class Fare_item{
+class Fare_item{    //顧客點餐的內容（動態新增菜單）
     int No;         //桌次號碼
     String name;    //菜名
     int price;      //價格
@@ -98,14 +98,6 @@ public class OrderList_ObjectArray {
         table_No = keyin.nextInt();
 
         print_menu();
-
-//        ** self-method **
-//        for (int i=0; i<Fare.length; i++){          //小於菜單項目數量
-//            System.out.printf("(%d)%s  ", (i+1), Menu[i].name);
-//            if ((i+1)%5 == 0){                  //可以整除就做斷行
-//                System.out.printf("\n");
-//            }
-//        }
 
         System.out.printf("(0)結束點菜\n");
         System.out.printf("請輸入菜名編號 =>");
