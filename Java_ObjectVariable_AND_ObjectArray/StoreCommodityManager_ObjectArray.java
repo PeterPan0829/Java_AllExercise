@@ -153,7 +153,7 @@ public class StoreCommodityManager_ObjectArray {
 
         /* 有找到這筆資料的話 */
         while (i < number){         // i < 紀錄資料儲存筆數
-            test = commodity[i].ID.compareTo(num);                  //compareTo(String anotherString) 按字典順序比較兩個字串。
+            test = commodity[i].ID.compareTo(num);           //compareTo(String anotherString) 按字典順序比較兩個字串。
             if (test == 0){
                 flag = 1;
                 break;
@@ -183,7 +183,7 @@ public class StoreCommodityManager_ObjectArray {
 
     /* 儲存商品資料至外部檔案 storage.data */
     public static void save_data() throws IOException{
-        BufferedWriter outData = new BufferedWriter(new FileWriter(file_R));       //儲存資料到 storage檔案中所以要寫入 Writer，因為是儲存商品資料至外部檔案 storage.data 所以變數我們寫 outData
+        BufferedWriter outData = new BufferedWriter(new FileWriter(file_R));  //儲存資料到 storage檔案中所以要寫入 Writer，因為是儲存商品資料至外部檔案 storage.data 所以變數我們寫 outData
         System.out.printf("** 將儲存檔案 (storage.data) **\n");
         for (int i=0; i<number; i++){
             outData.write(commodity[i].ID + "\t");
