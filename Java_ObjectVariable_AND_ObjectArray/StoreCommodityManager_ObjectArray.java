@@ -150,8 +150,8 @@ public class StoreCommodityManager_ObjectArray {
     public static void modify_data(){
         System.out.printf("請輸入欲修改的商品編碼 =>");
         String num = keyin.nextLine();
-        int flag = 0, test;
-        int i = 0;
+        int flag = 0, test;         // flag 我把它看成「旗標」，就是找到的目標物(這部份看下面的程式邏輯比較清楚)
+        int i = 0;                  // test 我把它看成 "測試是否找到輸入的商品編號" (這需要花時間去理解，要多點耐心!!)
 
         /* 有找到這筆資料的話 */
         while (i < number){         // i < 紀錄資料儲存筆數
