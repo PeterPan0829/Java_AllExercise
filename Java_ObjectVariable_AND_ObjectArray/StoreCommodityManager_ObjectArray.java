@@ -155,7 +155,7 @@ public class StoreCommodityManager_ObjectArray {
 
         /* 有找到這筆資料的話 */
         while (i < number){         // i < 紀錄資料儲存筆數
-            test = commodity[i].ID.compareTo(num);           //compareTo(String anotherString) 按字典順序比較兩個字串。
+            test = commodity[i].ID.compareTo(num);           //compareTo(String anotherString) 按ASCII碼字典順序比較兩個字串。(官方文件：返回值是整型,它是先比較對應字符的大小(ASCII碼順序),如果第一個字符和參數的第一個字符不等,結束比較,返回他們之間的差值 ,如果第一個字符和參數的第一個字符相等,則以第二個字符和參數的第二個字符做比較,以此類推,直至比較的字符或被比較的字符有一方。)
             if (test == 0){
                 flag = 1;
                 break;
