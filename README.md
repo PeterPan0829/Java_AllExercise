@@ -12,4 +12,8 @@ Java_FlowControl => 加入各種迴圈做流程控制
 
 Java_MethodAndImportAPI => 使用 Method(方法)、API套件完成練習
 
+Java_ObjectVariable_AND_ObjectArray => 物件變數與物件陣列 + 檔案輸入與輸出
+
+Java_OOP => 物件導向（class 與 object 產生）
+
 ※可以搭配 Wiki 講解內容來學習，懂原理才會操作唷!!
