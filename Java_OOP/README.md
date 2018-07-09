@@ -11,7 +11,7 @@
   
 ## 比較兩個物件是否為相同類型的類別後再比較其內容值是否相同  
   
-在Java裡，**equals** 和 **＝＝** 常令程式設計師困惑，這裡簡單說明如下 :  
+在Java裡，**equals 和 ＝＝** 常令程式設計師困惑，這裡簡單說明如下 :  
 1. ==  
 測試物件參考時，**唯有當兩個參考指向同一物件時，==運算子的結果才為true**，同樣的，唯有當兩個參考指向不同物件時，!=運算子的結果才為true，這兩個運算子的處理與物件的內容無關。需要特別注意的是，在String中使用==，因為Java為節省記憶體，會在某一輪調區中維護唯一的String物件，所以如果在類別裡使用同一字串，Java只會建立一個唯一的字串而已。
   
@@ -35,7 +35,8 @@ public static int getNumericValue(int codePoint)*
 *Character.getNumericValue(ch)*
   
 其中，ch可接受的範圍為0-9、A-Z、a-z。  
-而你一定會很好奇的是，字元輸入的是A、B…等英文字母，那會轉成什麼呢？答案是若是**英文單字A，則會轉成10，Z則會轉成35**，而英文字母是不分大小寫的。
+而你一定會很好奇的是，字元輸入的是A、B…等英文字母，那會轉成什麼呢？
+答案是若是**英文單字A，則會轉成10，Z則會轉成35**，而英文字母是不分大小寫的。  
   
 另外，你也可以用codePoint，即ascii碼來轉，以下為他的範例：  
 *Character.getNumericValue(codepoint)*
@@ -53,8 +54,8 @@ public static int getNumericValue(int codePoint)*
   
 ```java
 Scanner keyin = new Scanner(SID_No).useDelimiter("");
-    for (int i=0; i<10; i++){                       
-        SID_num1[i] = keyin.next();
-    }                  
+for (int i=0; i<10; i++){                       
+    SID_num1[i] = keyin.next();
+}                  
 ```
 
