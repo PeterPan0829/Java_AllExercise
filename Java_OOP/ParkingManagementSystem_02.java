@@ -90,16 +90,16 @@ public class ParkingManagementSystem_02 {
         int select = get_menu();
         while (select != 5){
             switch (select){
-                case 1:
+                case 1:             // 顯示目前停車
                     show_cars();
                     break;
-                case 2:
+                case 2:             // 設定現在時間
                     set_time();
                     break;
-                case 3:
+                case 3:             // 車輛進入
                     enter_car();
                     break;
-                case 4:
+                case 4:             // 車輛出場
                     outer_car();
                     break;
                     default:
