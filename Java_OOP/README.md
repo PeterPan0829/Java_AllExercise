@@ -57,5 +57,19 @@ Scanner keyin = new Scanner(SID_No).useDelimiter("");
 for (int i=0; i<10; i++){                       
     SID_num1[i] = keyin.next();
 }                  
-```
-
+```  
+  
+  
+## 資料型態  
+  
+(在CreateDepositSystem4_2範例有使用 long)整數常數表示法 :  
+Java 的整數有 byte, short, int, 與 long 四種, **整數常數預設型態是 int**,  
+如果數值較大, 可以在最後面加上 l 或 L 表示用長整數儲存, 例如 123L.
+  
+  
+## Arrays.equals()  
+  
+陣列中基本操作的排序、搜尋與比較等動作是很常見的，  
+在Java中提供了 Arrays類別 可以協助作這幾個動作，Arrays類別位於java.util套件中，
+它提供了幾個靜態方法可以直接呼叫使用。  
+(在CreateDepositSystem4_2範例有使用 Arrays.equals(ID,ID_R))**比較兩個陣列中的元素值是否全部相等，如果是將傳回true，否則傳回 false**
