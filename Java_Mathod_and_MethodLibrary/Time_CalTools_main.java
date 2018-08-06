@@ -1,7 +1,7 @@
 package Java_Mathod_and_MethodLibrary;
 
 /*
-    請參考 wiki 25_1 方法與方法庫產生 當中的 25_1_4 範例研討，會有詳細的說明和教學！
+    請參考 wiki 25_1 方法與方法庫產生 當中的 25_1_4 範例研討，會有詳細說明和教學！
 
     完成 Time 與 Time_CalTools 兩類別之後，
     我們利用 Time_CalTools_main 範例驗證這兩類別所產生的物件，觀察其功能是否滿足所需。
