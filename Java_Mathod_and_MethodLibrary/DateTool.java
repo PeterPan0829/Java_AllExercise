@@ -77,12 +77,12 @@ class Date{
 
 /* 時間工具類別, 包含 4 個方法 (計算器) */
 public class DateTool {
-    /* 每月的天數 */
+    /* 每月(12月)的天數 */
     static int Months[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     /* 轉換字串成為日期物件格式 */
     static Date getDate(String date_S) {
-        Date date = new Date();
+        Date date = new Date();     // 生成 date 這個物件才可以去使用 Date() 當中的方法、變數
         Scanner keyin = new Scanner(date_S).useDelimiter("/");
         date.year = keyin.nextInt();
         date.month = keyin.nextInt();
@@ -128,9 +128,7 @@ public class DateTool {
     /* 計算兩個日期之間天數的計算器 */
     static int dateInterval(Date start, Date end){
         int number = 0;
-        while (!((end.year == start.year)&&
-                (end.month == start.month)&&
-                (end.day == start.day))){
+        while (!((end.year == start.year) && (end.month == start.month) && (end.day == start.day))){
             start.day = start.day + 1;
             if (start.day > Months[start.month-1]){
                 start.month = start.month + 1;
@@ -145,3 +143,14 @@ public class DateTool {
         return number;
     }
 }
+
+/*
+    ! 用於 boolean 型態，
+    boolean 型態 只有 true 和 false 兩種值中的其中一種
+    使用 反向運算子 ! 會讓該 boolean 值 變為相反的 boolean 值
+    即 true 變 false ， false 變 true
+
+    在程式中可以想為電源開關
+    當電源開則如何......
+    當電源關則如何......
+ */
