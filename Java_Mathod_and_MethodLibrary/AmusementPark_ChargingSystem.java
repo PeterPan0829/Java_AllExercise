@@ -1,6 +1,8 @@
 package Java_Mathod_and_MethodLibrary;
 
 /*
+    運用 BufferedReader 讀取方式但有Bug, 尚未完成
+
     『Taipei AmusementPark 遊戲』採用按上線時間收費方法，遊戲者上線後開始計時，下線後在計算上線時間多寡計費，以每 30 秒 1 元計算。
     該公司需要一套收費資訊系統，因此在網路公開招標，期望參與投標者需製作一套雛型管理系統，
     應具有：設定目前時間、顯示上線遊戲者、開始遊戲、結束遊戲等功能；期望操作介面如下：
@@ -63,6 +65,7 @@ class Games{
 
 public class AmusementPark_ChargingSystem {
     static BufferedReader keyin = new BufferedReader(new InputStreamReader(System.in)); // 這是要去做讀取, 靜態鍵盤輸入物件
+
     static String time_readIn;                             // 讀入時間字串
     static Time now = new Time();                          // 儲存目前時間 (其實就是引用 Time class 產生一個物件變數)
     static Time time_T = new Time();                       // 時間暫存變數
@@ -80,8 +83,11 @@ public class AmusementPark_ChargingSystem {
         players = new Games[20];        // 儲存遊戲者陣列
 
 
-        int select = get_menu();
-//      keyin.read();
+        get_menu();
+//        int select = get_menu();
+        int select = keyin.read();
+//        keyin.read();
+
 
         while (select != 5) {
             switch (select) {
@@ -100,9 +106,12 @@ public class AmusementPark_ChargingSystem {
                 default:
                     System.out.printf("\n錯誤輸入，請重新選擇\n");
             }
-            select = get_menu();
+//            select = get_menu();
 //            select = keyin.read();
-//            keyin.readLine();
+//            keyin.read();
+            get_menu();
+            select = keyin.read();
+            keyin.read();
         }
     }
 
@@ -116,6 +125,7 @@ public class AmusementPark_ChargingSystem {
 
             int select = keyin.read();
             keyin.read();
+//            int select = keyin.nextInt();
             return select;
         }
 
@@ -125,6 +135,9 @@ public class AmusementPark_ChargingSystem {
             time_readIn = keyin.readLine();                 // 這邊是去做 readLine 讀取你所輸入的時分秒
             now = tool.getTime(time_readIn);                // 我們用一個從 Time Class 產生的物件變數 now 然後去取得從 Time_CarTools 產生的物件變數 tool 去取得物件方法 getTime()
             keyin.readLine();
+//            time_readIn = keyin.nextLine();
+//            now = tool.getTime(time_readIn);
+//            keyin.nextLine();
             return;
         }
 
@@ -143,12 +156,17 @@ public class AmusementPark_ChargingSystem {
             players.ul_name = keyin.readLine();
             number = number + 1;
             keyin.readLine();
+//            players.ul_name = keyin.nextLine();
+//            number = number + 1;
+//            keyin.nextLine();
+
         }
 
         // (4)停止遊戲
         static void stopGame () throws IOException {
             System.out.printf("\n按 Enter 鍵離開　=>");
             keyin.readLine();
+//            keyin.nextLine();
             System.exit(1); //宣告強制離開
         }
     }
