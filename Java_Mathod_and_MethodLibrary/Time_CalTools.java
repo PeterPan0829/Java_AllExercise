@@ -52,7 +52,7 @@ class Time_CalTools {
 
     /* 轉換字串成為時間物件格式 */
     Time getTime(String time_S){            // 這裡的回傳就像這樣 int setID(String ID_Str) {       // 取得字串 ID_Str 的輸入
-        Time time = new Time();
+        Time time = new Time();             // 必須經由 new 產生物件後，才可引用物件內的方法、變數，該物件內的方法則稱為 『物件方法』。
         Scanner keyin = new Scanner(time_S).useDelimiter("/");
         time.hour = keyin.nextInt();
         time.minute = keyin.nextInt();
@@ -60,43 +60,46 @@ class Time_CalTools {
         return time;
     }
 
-    /* 之前時間計算器, 下面還有之後時間計時器和兩點時間之間距離計算器, 只要搞懂 timeBefore怎麼寫後面你也可以觀察到其中的規則！ */
+    /* 之前時間計算器用 - , 下面還有之後時間計時器和兩點時間之間距離計算器, 只要搞懂 timeBefore怎麼寫後面你也可以觀察到其中的規則！ */
     Time timeBefore(Time now, Time value){              // 這裡的引數值 now 是指現在, value 是現在和之前的時間差
         Time time = new Time();                         // 物件宣告並產生, 可用 time 去取得 Time class 當中的變數和物件方法
-        time.hour=0; time.minute=0; time.second=0;
-        time.second = now.second - value.second;
-        if (time.second < 0){                           // 如果不夠 "減" 向 "分的60秒借"
+        time.hour=0; time.minute=0; time.second=0;      // 初始化是零
+        time.second = now.second - value.second;        // 計算方法就是要取得 "之前的時間" 所以是秒數等於現在的秒數減掉之前的秒數
+        if (time.second < 0){                           // 如果不夠 "減" 向 "分的60秒借所以加上六十,進位後 time.minute = 1"
             time.second = time.second + 60;
             time.minute = 1;
         }
 
-        time.minute = now.minute - value.minute - time.minute;          // now 的分 - 時間差的分 - 上面的 time.minute(1)
-        if (time.minute <0 ) {                          // 如果不夠 "減" 向 "一小時的60分借"
+        // 分鐘
+        time.minute = now.minute - value.minute - time.minute;          // 分鐘 = 現在的分 - 之前距離時間差的分 - 上面剛剛進位的 time.minute(1)
+        if (time.minute <0 ) {                          // 如果不夠 "減" 向 "一小時的60分借所以加上六十,進位後 time.hour = 1"
             time.minute = time.minute + 60;
             time.hour = 1;
         }
-        
-        time.hour = now.hour - value.hour - time.hour;  // now 的小時 - 時間差的小時 - 上面的 time.hour(1)
-        if (time.hour < 0){                             // 如果不夠 "減" 我們直接加上24小時"
-            time.hour = time.hour + 24;
-        }
-        return time;                                // 回傳時間會傳回：time.hour、time.minute、time.second　的值
-    }
 
-        /* 之後時間計算器 用+ */
+        // 小時
+        time.hour = now.hour - value.hour - time.hour;  // 小時 = 現在的小時 - 之前距離時間差的小時 - 上面剛剛進位的 time.hour(1)
+        if (time.hour < 0) {                               // 如果不夠 "減" 我們直接加上24小時"
+            time.hour = time.hour + 24;
+            }
+            return time;                                // 回傳時間會傳回：time.hour、time.minute、time.second　的值
+        }
+
+
+        /* 之後時間計算器用 + */
         Time timeAfter(Time now, Time value){
             Time time = new Time();
             time.hour = 0; time.minute = 0; time.second = 0;
             time.second = now.second + value.second;
             if (time.second > 60){
                 time.second = 60 - time.second;
-                time.minute = 1;
+                time.minute = 1;                                    // 進位
             }
 
-            time.minute = time.minute + now.minute + value.minute;
+            time.minute = time.minute + now.minute + value.minute;  // 之後的時間所以要 + 
             if (time.minute > 60){
                 time.minute = 60 - time.minute;
-                time.hour = 1;
+                time.hour = 1;                                      // 進位
             }
 
             time.hour = time.hour + now.hour + value.hour;
@@ -107,7 +110,7 @@ class Time_CalTools {
         }
 
     /* 兩點時間之間距離計算器 */
-    Time timeInterval(Time start, Time end){
+    Time timeInterval(Time start, Time end){            // 開始跟結束的點之間距離的間隔
         Time time = new Time();
         time.hour = 0; time.minute = 0; time.second = 0;
         time.second = end.second - start.second;
